@@ -1,0 +1,275 @@
+import socket
+import struct
+from uuid import getnode as get_mac
+from random import randint
+from port_range import PortRange
+import random
+import pyshark
+import subprocess
+capture = pyshark.LiveCapture(interface='eth0')
+capture.sniff(timeout=50)
+lst1=[]
+lst2=['192.168.4.138']
+def blockip(ip):
+cmd="/sbin/iptables -A INPUT -s "+ip+" -j DROP"
+print cmd
+subprocess.call(cmd,shell=True)
+def blockIP1(ip):
+cmd="/sbin/iptables -A INPUT -s "+ip+" -j DROP"
+subprocess.call(cmd, shell=True)
+subprocess.call("kill -9 $(/usr/bin/pgrep dumpcap)", shell=True)
+subprocess.call("/usr/bin/kill -9 $(/usr/bin/pgrep tshark)", shell=True)
+for i in range(len(capture)):
+pack=capture[i]
+
+
+print pack
+lst1.append(pack['ip'].src)
+type = options(opts, 'message-type')
+if type == 2:
+log.info("detected dhcp discover response: %s", packet.summary())
+offer = {
+"server_ip": packet[IP].src,
+"server_mac": packet[Ether].src,
+"ip": packet[BOOTP].yiaddr
+}
+for o in opts:
+if not isinstance(o, basestring):
+offer[o[0]] = o[1]
+offers.append(offer)
+if len(offers) == 3:
+log.error("no dhcp offers!")
+sys.exit(1)
+log.info("offers: %s", offers)
+discoverPacket = DHCPDiscover()
+dhcps.sendto(discoverPacket.buildPacket(), ('<broadcast>', 67))
+dhcps = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+
+dhcps.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST, 1)
+try:
+dhcps.bind(('', 68))
+except Exception as e:
+print('port 68 in use...')
+dhcps.close()
+input('press any key to quit...')
+exit()
+#dhcp offer
+class DHCPOffer:
+def __init__(self, data, transID):
+self.data = data
+self.transID = transID
+self.offerIP = ''
+self.nextServerIP = ''
+self.DHCPServerIdentifier = ''
+self.leaseTime = ''
+self.router = ''
+self.subnetMask = ''
+self.DNS = []
+self.unpack()
+true=1
+class DHCPDiscover:
+def __init__(self):
+self.transactionID = b''
+for i in range(4):
+t = randint(0, 255)
+
+
+self.transactionID += struct.pack('!B', t)
+true=1
+while(false)
+getmac --help
+getmac --version
+getmac
+python -m getmac
+getmac --interface ens33
+getmac --ip 192.168.0.1
+getmac --ip6 ::1
+getmac --hostname home.router
+python -m getmac -i 'Ethernet 4'
+python -m getmac -4 192.168.0.1
+python -m getmac -6 ::1
+python -m getmac -n home.router
+getmac --no-network-request -4 192.168.0.1
+python -m getmac --no-network-request -n home.router
+getmac --verbose
+getmac -v --debug
+python -m getmac -v -d -i enp11s4
+python -m getmac -v -dd -n home.router
+if sender_mac is self:
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+s.bind((HOST, PORT))
+s.listen()
+conn, addr = s.accept()
+
+
+with conn:
+print('Connected by', addr)
+while True:
+data = conn.recv(1024)
+if not data:
+break
+conn.sendall(data)
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+pass
+s.bind((HOST, PORT))
+s.listen()
+conn, addr = s.accept()
+while False:
+print 'packet dropped ignore packet'
+while True:
+from port_range import PortRange
+pr = PortRange('static/ip')
+pr.port_from
+staticmethod
+pr.port_to
+endswith
+pr.bounds
+(startswith, endswith)
+
+
+
+while True:
+print 'ignore the packet'
+while False:
+import socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(('', x))
+s.getsockname()
+('0.0.0.0', 3070)
+while True:
+import socket
+for x in range(10):
+print random.randint(1,21)*5,
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(('', x))
+s.getsockname()
+('0.0.0.0', 3070)
+while False:
+print 'packet ignored'
+while(true)
+getmac --help
+getmac --version
+getmac
+python -m getmac
+getmac --interface ens33
+
+
+getmac --ip 192.168.0.1
+getmac --ip6 ::1
+getmac --hostname home.router
+python -m getmac -i 'Ethernet 4'
+python -m getmac -4 192.168.0.1
+python -m getmac -6 ::1
+python -m getmac -n home.router
+getmac --no-network-request -4 192.168.0.1
+python -m getmac --no-network-request -n home.router
+getmac --verbose
+getmac -v --debug
+python -m getmac -v -d -i enp11s4
+python -m getmac -v -dd -n home.router
+if sender_mac is self:
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+s.bind((HOST, PORT))
+s.listen()
+conn, addr = s.accept()
+with conn:
+print('Connected by', addr)
+while True:
+data = conn.recv(1024)
+if not data:
+break
+conn.sendall(data)
+with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+pass
+
+
+s.bind((HOST, PORT))
+s.listen()
+conn, addr = s.accept()
+re.match(pattern, mac)
+input = raw_input("Enter an input string:")
+m = re.match('\d{5}\Z',input)
+if m
+from port_range import PortRange
+pr = PortRange('static/ip')
+pr.port_from
+staticmethod
+pr.port_to
+endswith
+pr.bounds
+(startswith, endswith)
+if m: (true)
+print 'ignore the packet'
+else:
+re.search(pattern, ip)
+ip = re.compile('(([2][5][0-5]\.)|([2][0-4][0-9]\.)|([0-1]?[0-9]?[0-9]\.)){3}'
+
+
++'(([2][5][0-5])|([2][0-4][0-9])|([0-1]?[0-9]?[0-9]))')
+match = ip.search("Your ip address is 192.168.0.1, have fun!")
+if match:
+print 'IP address found:',
+print match.group(),
+print 'at position',match.span()
+import socket
+for x in range(10):
+print random.randint(1,21)*5,
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(('', x))
+s.getsockname()
+('0.0.0.0', 3070)
+while(true)
+import socket
+for x in range(10):
+print random.randint(1,21)*5,
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.bind(('', x))
+s.getsockname()
+('0.0.0.0', 3070)
+else:
+print 'IP address not found'
+class make_rule(iptc.Rule):
+def __init__(self):
+
+
+
+iptc.Rule.__init__(self)
+self.method={'block': self.block,
+'snat': self.snat,
+'allow': self.allow,
+'i_iface': self.i_iface,
+'o_iface': self.o_iface,
+'source': self.source,
+'destination': self.destination}
+class phyawall:
+def __init__(self):
+self.list = []
+def add_rule(self, rule_dict):
+tbl = pop_table(rule_dict['tblchn']['table'])
+chn = rule_dict['tblchn']['chain']
+act = tbl.method[rule_dict['tblchn']['action']]
+tmp = make_rule()
+for i in rule_dict['rule']:
+tmp.method[i](rule_dict['rule'][i])
+act(chn, tmp)
+for x in range(10):
+print random.randint(1,21)*5,
+print
+else
+class make_rule(iptc.Rule):
+def __init__(self):
+
+
+iptc.Rule.__init__(self)
+self.method={'block': self.block,
+'snat': self.snat,
+'allow': self.allow,
+'i_iface': self.i_iface,
+'o_iface': self.o_iface,
+'source': self.source,
+'destination': self.destination}
+set_ev_cls(ofp_event.EventOFPPortStatus, MAIN_DISPATCHER)
+def handl_port_stat(self, ev):
+switch=SimpleSwitch()
+switch.port_status_handler(ev)
